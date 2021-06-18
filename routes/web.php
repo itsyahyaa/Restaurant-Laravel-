@@ -19,4 +19,6 @@ use App\Http\Controllers\RestoController;
 
 Route::get("/",[RestoController::class,'index']);
 
+Route::get("/list",[RestoController::class,'list']);
+
 // Route::get("/",'RestoController@index');

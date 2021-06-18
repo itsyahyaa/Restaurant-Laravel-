@@ -10,17 +10,47 @@
 </head>
 <body>
 
-<header>
-    Menu will be here
-</header>
-<div>
+<!-- Navbar Start -->
+
+<nav class="navbar navbar-expand-md  navbar-light bg-light shadow-sm">
+      <a class="navbar-brand text-danger fw-bold fs-4" href="/">Resto</a>
+      <button class="navbar-toggler bg-danger" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 px-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active me-3" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-3" href="/list">List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-3" href="">Add</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-3" href="">Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-3" href="">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-3" href="">Register</a>
+          </li>
+
+        </ul>
+    </div>
+  </nav>
+
+  <!-- Navbar End -->
+<div >
     @yield('content')
 </div>
 
 
-<footer>
+{{-- <footer>
     Copyright by Restaurant App
-</footer>
+</footer> --}}
 
 </body>
 </html>
