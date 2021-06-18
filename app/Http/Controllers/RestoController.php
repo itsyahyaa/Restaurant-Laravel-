@@ -18,4 +18,10 @@ class RestoController extends Controller
         Return view('list',['data'=>$data]);
 
     }
+
+    // add data to database
+    function add(Request $req){
+        return $req->input();
+
+    }
 }

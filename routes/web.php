@@ -21,4 +21,6 @@ Route::get("/",[RestoController::class,'index']);
 
 Route::get("/list",[RestoController::class,'list']);
 
-// Route::get("/",'RestoController@index');
+Route::view('/add','add');
+Route::post("/add",[RestoController::class,'add']);
+
