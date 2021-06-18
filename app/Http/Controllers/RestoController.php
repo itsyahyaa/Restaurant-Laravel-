@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Restuarant;
 use Illuminate\Http\Request;
 
 class RestoController extends Controller
@@ -12,8 +12,10 @@ class RestoController extends Controller
 
     }
 
+    // function that search data from restaurants table in data base
     function list(){
-        Return view('list');
+        $data = Restuarant::all();
+        Return view('list',['data'=>$data]);
 
     }
 }

@@ -43,7 +43,7 @@
   </nav>
 
   <!-- Navbar End -->
-<div >
+<div class="container">
     @yield('content')
 </div>
 
