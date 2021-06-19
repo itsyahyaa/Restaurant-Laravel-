@@ -23,5 +23,6 @@ class RestoController extends Controller
     function add(Request $req){
         return $req->input();
 
+
     }
 }

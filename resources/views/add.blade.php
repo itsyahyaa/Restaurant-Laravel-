@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1>Add form</h1>
+<h1>Add Restaurant Page here </h1>
 <form action="" method="POST">
 @csrf
 <div class="col-sm-8">
