@@ -19,6 +19,7 @@
       <th scope="col">Name</th>
       <th scope="col">Email</th>
       <th scope="col">Address</th>
+      <th scope="col">Operations</th>
     </tr>
   </thead>
 {{-- Displaying data in loop format --}}
@@ -29,6 +30,9 @@
         <td>{{$item['name']}}</td>
         <td>{{$item['email']}}</td>
         <td>{{$item['address']}}</td>
+        <td>
+            <a href="/delete/{{$item['id']}}">Delete</a>
+            <a href="/edit/{{$item['id']}}">  Edit</td>
       </tr>
     </tbody>
     @endforeach

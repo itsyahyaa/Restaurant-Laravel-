@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Restuarant;
 
+
 class RestoController extends Controller
 {
 
@@ -32,4 +33,34 @@ class RestoController extends Controller
 
 
     }
+
+    //Delete item from database
+    function delete(Request $req){
+        $data = Restuarant::find($req->id);
+        $data->delete();
+        $req->session()->flash('status','Resturant Deleted Successfully');
+        return redirect('list');
+    }
+
+
+    function edit($id)
+    {
+        $data = Restuarant::find($id);
+        return view('edit',['data'=>$data]);
+    }
+
+
+    function update(Request $req){
+        $data = Restuarant::find($req->id);
+        $data->name=$req->name;
+        $data->email=$req->email;
+        $data->address=$req->address;
+        $data->save();
+        //flash session will help to display Output when data entered successfully
+        $req->session()->flash('status','Resturant Updated Successfully');
+        return redirect('list');
+
+
+    }
+
 }
