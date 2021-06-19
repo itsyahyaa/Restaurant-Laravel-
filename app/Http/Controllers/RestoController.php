@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Restuarant;
 use Illuminate\Http\Request;
+use App\Models\Restuarant;
 
 class RestoController extends Controller
 {
@@ -21,7 +21,12 @@ class RestoController extends Controller
 
     // add data to database
     function add(Request $req){
-        return $req->input();
+        $user = new Restuarant;
+        $user->name=$req->name;
+        $user->email=$req->email;
+        $user->address=$req->address;
+        $user->save();
+        return redirect('list');
 
 
     }
