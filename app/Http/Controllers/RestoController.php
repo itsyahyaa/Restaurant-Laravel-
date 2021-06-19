@@ -26,6 +26,8 @@ class RestoController extends Controller
         $user->email=$req->email;
         $user->address=$req->address;
         $user->save();
+        //flash session will help to display Output when data entered successfully
+        $req->session()->flash('status','Resturant Entered Successfully');
         return redirect('list');
 
 

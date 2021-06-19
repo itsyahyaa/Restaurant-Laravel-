@@ -2,8 +2,16 @@
 
 @section('content')
 
-<h1></h1>
-Restaurant List Page Is Here
+<h1>Restaurant List Page Is Here</h1>
+@if(Session::get('status'))
+
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{Session::get('status')}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
+@endif
+
 <table class="table ">
 <thead>
     <tr class="bg-dark text-light">
