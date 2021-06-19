@@ -7,7 +7,7 @@
 @csrf
 <div class="col-sm-8">
     <div class="mb-3 ">
-    
+    <input type="hidden" name="id" value="{{$data['id']}}">
       <label  class="form-label">Name </label>
       <input type="text" class="form-control" name="name" placeholder="Enter Your Name" value="{{$data['name']}}">
     </div>
